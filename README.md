@@ -10,5 +10,3 @@ This dump uses one of the leaked keys. If you want, you can swap keys, follow th
 - Open the extension code
 - Replace all mentions of this string: `6d1314a021a4f3e7b0a27aa37cc4ccbb1484a5e92dc878e5cb3eb239249e6ee9` with your key in `main.js`
 - Do the same for `manifest.json`
-
-*For some reason not known right now, it seems to only work on Chromebooks? I tried it on Chromium with a valid product key (my school's), did not work.*
