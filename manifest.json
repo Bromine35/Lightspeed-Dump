@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "Lightspeed Filter Agent",
+  "description": "Lightspeed Filter Agent for Chrome",
+  "version": "3.7.0.1724395099",
+  "options_page": "options.html",
+  "icons": {
+    "16": "icon-16.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "webRequest",
+    "<all_urls>",
+    "http://*/*",
+    "idle",
+    "background",
+    "https://*/*",
+    "tabs",
+    "storage",
+    "history",
+    "webRequestBlocking",
+    "identity",
+    "identity.email",
+    "management",
+    "enterprise.deviceAttributes",
+    "proxy"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "all_frames": true,
+      "js": [
+        "in_page.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "main.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "*.png"
+  ],
+  "incognito": "spanning",
+  "update_url": "https://lsrelay-extensions-production.s3.amazonaws.com/chrome-filter/6d1314a021a4f3e7b0a27aa37cc4ccbb1484a5e92dc878e5cb3eb239249e6ee9/ChromeFilter.xml"
+}
